@@ -1,35 +1,51 @@
-# API Testing Automation Project
+# 🚀 REST API Test Automation Framework
 
-This project is a **REST API testing framework** built with **Java**, **JUnit 5**, and **Rest-Assured**.  
-It demonstrates automated testing of different API endpoints with validation of responses, headers, status codes, and JSON content.
-
----
-
-## Project Overview
-
-- Automated testing for **GET, POST, and PUT requests**.  
-- Validated **status codes, response headers, and response times**.  
-- Handled and verified **JSON request and response payloads**.  
-- Combined **manual inspection** (prettyPrint, prettyPeek) with **automated assertions** for thorough testing.  
-- Followed a **hybrid approach** to make tests readable, maintainable, and reusable.
+A professional **REST API testing framework** built with **Java**, **Rest-Assured**, and **JUnit 5**. This project demonstrates industry-standard practices for automating backend endpoints, validating data integrity, and handling complex JSON structures.
 
 ---
 
-## Key Skills Developed
+## 🏗️ Project Architecture & Features
 
-- REST API automation using **Rest-Assured**.  
-- Test creation and execution with **JUnit 5**.  
-- JSON payload creation, parsing, and validation.  
-- Understanding HTTP methods, status codes, and response headers.  
-- Writing clear, maintainable, and reusable automated tests.
+This framework adopts a **Hybrid Approach**, ensuring tests are both readable and highly reusable. Key features include:
+
+* **Full CRUD Operations:** Automated execution and validation of `GET`, `POST`, and `PUT` HTTP methods.
+* **Dynamic Payload Construction:** Utilizing `JSONObject` to dynamically build nested and complex JSON request bodies (e.g., handling `bookingdates`).
+* **Header & Status Validation:** Strict verification of HTTP Status Codes (200 OK, 201 Created) and Response Headers.
+* **Advanced Logging:** Integrated `prettyPrint()` for effective debugging and response visualization.
 
 ---
 
-## How to Run
+## 🧪 Advanced Validation Strategies
 
-1. Clone the repository:
-```bash
-git clone <repository-url>
+The framework implements two distinct assertion methodologies to ensure maximum reliability:
 
-Author
-Yaprak Ersan
+### 1. Fluent API Assertions (Rest-Assured & Hamcrest)
+Streamlined, chainable validations directly within the response pipeline.
+```java
+response.then().assertThat()
+        .statusCode(200)
+        .body("booking.firstname", equalTo("Ahmet"));
+2. Data Extraction via JsonPath (Hard Assertions)
+Extracting specific values into Java variables for precise comparison using JUnit 5.
+
+Java
+JsonPath resJP = response.jsonPath();
+assertEquals(500, resJP.getInt("booking.totalprice"));
+
+🔑 Key Skills & Technical Expertise
+HTTP Protocol Mastery: Deep understanding of methods, status codes, and headers.
+
+JSON Navigation: Deep object navigation using GPath (e.g., booking.bookingdates.checkin).
+
+Data Types: Handling and converting JSON values to Java types (String, Integer, Boolean).
+
+Version Control: Managed with Git, utilizing pull --rebase and push workflows.
+
+⚙️ How to Run
+Clone the repository: git clone https://github.com/yaprakersan/Hybrid-API-Testing.git
+
+Navigate to the project directory: cd Hybrid-API-Testing
+
+Execute tests via IntelliJ IDEA or Maven.
+
+Author: Yaprak Ersan

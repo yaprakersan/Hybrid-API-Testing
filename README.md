@@ -98,15 +98,7 @@ assertEquals(500, resJP.getInt("booking.totalprice"));
 
 ---
 
-## Getting Started
 
-### Clone the Repository
-
-```bash
-git clone https://github.com/yaprakersan/Hybrid-API-Testing.git
-cd Hybrid-API-Testing
-mvn clean install
-mvn test
 
 Author
 Yaprak Ersan

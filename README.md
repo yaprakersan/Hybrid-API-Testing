@@ -57,42 +57,57 @@ JsonPath resJP = response.jsonPath();
 assertEquals("Murat", resJP.getString("booking.firstname"));
 assertEquals(500, resJP.getInt("booking.totalprice"));
 
-Technical Skills Demonstrated
-API Testing Expertise
-Deep understanding of HTTP methods and status codes
-JSON navigation using GPath expressions
-RESTful API principles
-Nested object validation
-Data type handling (String, Integer, Boolean)
-Framework Development
-Reusable RequestSpecification configuration
-Base URL abstraction
-POJO-based deserialization
-Clean test structure with JUnit 5
-Strong assertion strategies
-Development Tools
-Git version control
-Maven dependency management
-IntelliJ IDEA
-Structured package organization
-Real-World Test Scenarios
-Booking API Testing
-Booking creation with nested dates
-Query parameter filtering (firstname & lastname)
-Status code and response size validation
-Data integrity verification
-JSONPlaceholder API Testing
-GET request full body validation
-PUT request body update verification
-Expected vs Actual data comparison
-Deserialization into POJO objects
-Getting Started
-Clone the repository
-bash
+
+## Technical Skills Demonstrated
+
+### API Testing Expertise
+- Deep understanding of HTTP methods and status codes  
+- JSON navigation using GPath expressions  
+- RESTful API principles  
+- Nested object validation  
+- Data type handling (String, Integer, Boolean)  
+
+### Framework Development
+- Reusable `RequestSpecification` configuration  
+- Base URL abstraction  
+- POJO-based deserialization  
+- Clean test structure with JUnit 5  
+- Strong assertion strategies  
+
+### Development Tools
+- Git version control  
+- Maven dependency management  
+- IntelliJ IDEA  
+- Structured package organization  
+
+---
+
+## Real-World Test Scenarios
+
+### Booking API Testing
+- Booking creation with nested dates  
+- Query parameter filtering (firstname & lastname)  
+- Status code and response size validation  
+- Data integrity verification  
+
+### JSONPlaceholder API Testing
+- GET request full body validation  
+- PUT request body update verification  
+- Expected vs Actual data comparison  
+- Deserialization into POJO objects  
+
+---
+
+## Getting Started
+
+### Clone the Repository
+
+```bash
 git clone https://github.com/yaprakersan/Hybrid-API-Testing.git
 cd Hybrid-API-Testing
 mvn clean install
 mvn test
+
 Author
 Yaprak Ersan
 
